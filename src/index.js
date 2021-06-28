@@ -1,4 +1,5 @@
 import * as tab from './tab';
+import './css/style.css';
 
 const $body = document.getElementById('content');
 
