@@ -1,3 +1,6 @@
-import menu from './menu.js';
+import * as tab from './tab';
 
-console.log('from /src => index.js');
+const $body = document.getElementById('content');
+
+//adding tab swithching navigation bar to the content of the page
+tab.attachNavbarTo($body);
