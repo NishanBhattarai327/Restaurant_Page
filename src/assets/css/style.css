@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: black;
+}
+
 .tab-content {
 	color: blue;
 	width: 100%;
@@ -64,7 +68,17 @@
 
 /*style for menu*/
 div.menu {
-	padding: 10px 0;
+	position: relative;
+	margin: 10px;
+}
+
+div.menu:after {
+	content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 div.gallery {
@@ -78,6 +92,7 @@ div.gallery img {
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 5px;
 }
 
 .overlay {
