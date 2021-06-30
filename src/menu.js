@@ -4,21 +4,47 @@ export default function menuTab() {
 	const menu = document.createElement('div');
 	menu.classList.add('menu');
 
-	//Add the image
-	const img = new Image();
-	img.width = 500;
-	img.height = 400;
-	img.src = imgSalad;
-
-	menu.appendChild(createHeading());
-	menu.appendChild(img);
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
+	menu.appendChild(menuCard(imgSalad, {name:'I am salad', price: 500}));
 
 	return menu;
 }
 
-function createHeading() {
+function createHeading(text) {
 	let heading = document.createElement('header');
 	heading.classList.add('menu-heading');
-	heading.innerHTML = "<h2>Menu </h2><br>What Do you want to eat?";
+	heading.innerHTML = text;
 	return heading;
+}
+
+function pTag(text) {
+	const p = document.createElement('p');
+	p.innerHTML = text;
+	return p;
+}
+
+function menuCard(imgSrc, text) {
+	const div = document.createElement('div');
+	div.classList.add('responsive');
+	div.innerHTML = `
+		<div class='gallery'>
+			<img class='food-img' src="${imgSrc}" alt="menu food"> 
+			<div class='overlay'>
+				<div class='desc'>
+					${text.name} <br>
+					Price Rs ${text.price}
+				</div>
+			</div>
+		</div>
+	`;
+	return div;
 }
