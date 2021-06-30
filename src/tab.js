@@ -50,7 +50,7 @@ function attachNavbarTo(body) {
 	navbar.appendChild(contact);
 
 	/*Default tab*/
-	renderTab(tabBody, aboutTab());
+	renderTab(tabBody, homeTab());
 
 	body.appendChild(navbar);
 	body.appendChild(tabBody);
