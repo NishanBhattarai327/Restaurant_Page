@@ -119,3 +119,24 @@ div.gallery:hover .overlay{
 div.gallery:hover img {
 	opacity: 0.3;
 }
+
+
+/*Styling About us*/
+.about-us-message {
+	text-align: center;
+	padding-top: 50px;
+	margin: auto;
+	color: white;
+	font-weight: 600;
+	font-family: monospace, cursive;
+	width: 60%;
+}
+
+.about-us-message strong {
+	color: indianred;
+}
+
+.about-us-message h2 {
+	color: sandybrown;
+	font-size: 4vw;
+}
